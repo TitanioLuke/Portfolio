@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências (caso no futuro uses npm)
+node_modules/
+
+# Ambiente
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Ficheiros temporários
+*.tmp
+*.swp

@@ -1,4 +1,4 @@
-// Smooth scroll 
+// Smooth scroll com fallback para mobile
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -7,29 +7,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(targetId);
         
         if (target) {
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const duration = 500; // time to scroll
-            let start = null;
+            const yOffset = -80; // offset para o navbar
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
             
-            function animation(currentTime) {
-                if (start === null) start = currentTime;
-                const timeElapsed = currentTime - start;
-                const run = ease(timeElapsed, startPosition, distance, duration);
-                window.scrollTo(0, run);
-                if (timeElapsed < duration) requestAnimationFrame(animation);
+            // Tenta primeiro o método nativo
+            if ('scrollBehavior' in document.documentElement.style) {
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Fallback para browsers antigos
+                window.scrollTo(0, y);
             }
-            
-            // easing function 
-            function ease(t, b, c, d) {
-                t /= d / 2;
-                if (t < 1) return c / 2 * t * t + b;
-                t--;
-                return -c / 2 * (t * (t - 2) - 1) + b;
-            }
-            
-            requestAnimationFrame(animation);
         }
     });
 });

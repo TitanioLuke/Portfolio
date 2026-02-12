@@ -2,39 +2,53 @@ function sendMail(event) {
 
     event.preventDefault();
 
+    const button = document.querySelector("button[type='submit']");
+
+    // parms in emailjs
     let parms = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
+        name: document.getElementById("name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        message: document.getElementById("message").value.trim(),
     }
 
-    // simple validation 
+    // validate empty parms
     if (!parms.name || !parms.email || !parms.message) {
         showToast("Please fill in all fields", "error");
         return;
     }
 
-    // email validation 
-    if (!validateEmailInput()) {
+    // validate email
+    if (!validateEmail(parms.email)) {
         showToast("Please enter a valid email address", "error");
         return;
     }
 
+    // block button
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    // send email
     emailjs.send("service_bqhxl0n", "template_3pgoay2", parms)
-        .then(function(response) {
+        .then(function () {
 
-            showToast('Email sent successfully!', 'success');
+            showToast("Email sent successfully!", "success");
 
-            // clear the forms
-            document.getElementById("name").value = '';
-            document.getElementById("email").value = '';
-            document.getElementById("message").value = '';
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
 
         })
-        .catch(function(error) {
+        .catch(function (error) {
 
-            showToast('Failed to send email. Try again!', 'error');
-            console.error('Error:', error);
+            console.error("Error:", error);
+            showToast("Failed to send email. Try again!", "error");
+
+        })
+        .finally(function () {
+
+            // return button to text
+            button.disabled = false;
+            button.textContent = "Send Message";
 
         });
 }
@@ -75,9 +89,7 @@ function showToast(message, type) {
     }, 3000);
 }
 
-function validateEmailInput() {
-  const emailInput = document.getElementById('email').value; 
+function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  return emailRegex.test(emailInput);
+  return emailRegex.test(email);
 }

@@ -173,12 +173,12 @@
                         <input type="text" id="name">
 
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" oninput="validateEmailInput()">
 
                         <label for="message">Message</label>
                         <textarea id="message" cols="30" rows="10"></textarea>
 
-                        <button type="submit" onclick="sendMail()">Send Message</button>
+                        <button type="submit" onclick="sendMail(event)">Send Message</button>
                     </form>
                 </div>
         </section>

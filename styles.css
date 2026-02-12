@@ -16,7 +16,7 @@ html {
 
 body {
     font-family: 'SN Pro', sans-serif;
-    background-color: (var(--background-color));
+    background-color: var(--background-color);
 }
 
 a {
@@ -331,6 +331,45 @@ nav .right a span {
     transform: translateY(0);
 }
 
+/*toast*/
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-family: 'SN Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.toast.error {
+    background-color: #ff4242;
+    color: white;
+}
+
+.toast i {
+    font-size: 18px;
+}
+
 @media (max-width: 850px) {
     /*me-section*/
     .hero-section {
@@ -409,5 +448,19 @@ nav .right a span {
     
     .project-image {
         height: 220px;
+    }
+
+    /*toast*/
+    .toast {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        max-width: none;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .toast i {
+        font-size: 16px;
     }
 }

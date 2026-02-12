@@ -150,6 +150,100 @@ nav .right a span {
     font-size: 18px;
 }
 
+/*projects-section*/
+.projects-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.projects-section .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.project-description {
+    font-family: 'SN Pro', sans-serif;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-outline {
+    padding: 10px 25px;
+    border: 2px solid var(--text-color);
+    border-radius: 25px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color);
+    color: #fff;
+}
+
 /*contact-section*/
 .contact-section {
     padding: 0 50px;
@@ -236,6 +330,7 @@ nav .right a span {
 .contact-section .group form button:active {
     transform: translateY(0);
 }
+
 @media (max-width: 850px) {
     /*me-section*/
     .hero-section {
@@ -301,5 +396,18 @@ nav .right a span {
 
     .skills-section .cells .cell span  {
         font-size: 16px;
+    }
+
+     /*projects-section*/
+    .projects-section {
+        padding: 0 20px;
+    }
+    
+    .project-card {
+        max-width: 320px;
+    }
+    
+    .project-image {
+        height: 220px;
     }
 }

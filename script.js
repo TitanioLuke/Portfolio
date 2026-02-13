@@ -106,7 +106,7 @@ const translations = {
 
     // HERO
     hero_title: "Hello, I'm Afonso!",
-    hero_text: "I'm an Informatics Engineering student aiming to build a career in cybersecurity. I'm driven by curiosity. I love understanding how systems work and how they can be made stronger and more secure. When I'm not coding playing one of my many instruments, you'll find me listening to music, reading books or writing poetry - always exploring new ideas.",
+    hero_text: "I'm an Informatics Engineering student aiming to build a career in cybersecurity. I'm driven by curiosity. I love understanding how systems work and how they can be made stronger and more secure. When I'm not coding you'll find me playing one of my many instruments, listening to music, reading books or writing poetry - always exploring new ideas.",
 
     hero_skills: "Skills",
     hero_projects: "Projects",

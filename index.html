@@ -37,6 +37,14 @@
         </div>
 
         <div class="right">
+
+            <!-- Language Switch -->
+            <a href="#" onclick="toggleLanguage()" class="lang-switch">
+                <i class="fa-solid fa-globe globe-icon"></i>
+                <span id="lang-text">PT</span>
+            </a>
+
+
             <!---github-->
             <a href="https://github.com/TitanioLuke" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
@@ -61,26 +69,26 @@
         <!---me-->
         <section class="hero-section">
             <div class="text">
-                <h2>Hello, I'm Afonso!</h2>
-                <p>I'm an Informatics Engineering student aiming to build a career in cybersecurity.
+                <h2 data-i18n="hero_title">Hello, I'm Afonso!</h2>
+                <p data-i18n="hero_text">I'm an Informatics Engineering student aiming to build a career in cybersecurity.
                     I'm driven by curiosity. I love understanding how systems work and how they can 
-                    be made stronger and more secure. When I'm not coding, you'll find me listening 
+                    be made stronger and more secure. When I'm not coding, you'll find me playing one of my many instruments, listening 
                     to music, reading books or writing poetry - always exploring new ideas.</p>
 
                 <div class="links">
                     <a href="#skills">
                         <i class="fa-solid fa-code"></i>
-                        <span>Skills</span>
+                        <span data-i18n="hero_skills">Skills</span>
                     </a>
 
                     <a href="#projects">
                         <i class="fa-solid fa-pen"></i>
-                        <span>Projects</span>
+                        <span data-i18n="hero_projects">Projects</span>
                     </a>
 
                     <a href="#contact">
                         <i class="fa-solid fa-envelope"></i>
-                        <span>Contact</span>
+                        <span data-i18n="hero_contact">Contact</span>
                     </a>
                 </div>
             </div>
@@ -92,8 +100,8 @@
 
         <!---skills-->
         <section id="skills" class="skills-section">
-            <h2>Skills</h2>
-            <div class="text">
+            <h2 data-i18n="skills_title">Skills</h2>
+            <div class="text" data-i18n="skills_text">
                 These are some of the technologies and concepts I've been working with 
                 throughout my degree and personal projects. I'm continuously learning and 
                 expanding my skills, and I'm always open to explore new ideas and technologies.
@@ -145,8 +153,8 @@
 
         <!---projects-->
         <section id="projects" class="projects-section">
-            <p class="subtitle">Browse My Recent</p>
-            <h2>Projects</h2>
+            <p class="subtitle" data-i18n="projects_subtitle">Browse My Recent</p>
+            <h2 data-i18n="projects_title">Projects</h2>
     
             <div class="projects-container">
                 <div class="project-card">
@@ -154,10 +162,10 @@
                         <img src="images/sh.png" alt="Project One">
                     </div>
                     <h3>SolveHub</h3>
-                    <p class="project-description">A collaborative platform for solving academic exercises, where students can share, solve, and discuss exercises within a community.</p>
+                    <p class="project-description" data-i18n="project_description">A collaborative platform for solving academic exercises, where students can share, solve, and discuss exercises within a community.</p>
                     <div class="project-buttons">
                         <a href="https://github.com/TitanioLuke/SolveHub" target="_blank" rel="noopener noreferrer" class="btn-outline">GitHub</a>
-                        <a href="https://solvehub.tech/auth.html" class="btn-outline" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href="https://solvehub.tech/auth.html" class="btn-outline" target="_blank" rel="noopener noreferrer" data-i18n="live_demo">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -165,20 +173,20 @@
 
         <!---contact-->
         <section id="contact" class="contact-section">
-            <h2>Contact Me</h2>
-            <p class="description">Have a question or want to work together? Drop me a message!</p>
+            <h2 data-i18n="contact_title">Contact Me</h2>
+            <p class="description" data-i18n="contact_description">Have a question or want to work together? Drop me a message!</p>
                 <div class="group">
                     <form>
-                        <label for="name">Name</label>
+                        <label for="name" data-i18n="label_name">Name</label>
                         <input type="text" id="name">
 
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="label_email">Email</label>
                         <input type="email" id="email" oninput="validateEmailInput()">
 
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="label_message">Message</label>
                         <textarea id="message" cols="30" rows="10"></textarea>
 
-                        <button type="submit" onclick="sendMail(event)">Send Message</button>
+                        <button type="submit" onclick="sendMail(event)" data-i18n="send_button">Send Message</button>
                     </form>
                 </div>
         </section>

@@ -119,7 +119,8 @@ const translations = {
     // PROJECTS
     projects_subtitle: "Browse My Recent",
     projects_title: "Projects",
-    project_description: "A collaborative platform for solving academic exercises, where students can share, solve, and discuss exercises within a community.",
+    project_description_solvehub: "A collaborative platform for solving academic exercises, where students can share, solve, and discuss exercises within a community.",
+    project_description_gobraga: "A cross-platform application that provides tourists and visitors with essential information about Braga, including tourist attractions, restaurants and much more.",
     live_demo: "Live Demo",
 
     // CONTACT
@@ -154,7 +155,8 @@ const translations = {
     // PROJECTS
     projects_subtitle: "Explora os Meus Recentes",
     projects_title: "Projetos",
-    project_description: "Uma plataforma colaborativa para resolução de exercícios académicos, onde estudantes podem partilhar, resolver e discutir exercícios numa comunidade.",
+    project_description_solvehub: "Uma plataforma colaborativa para resolução de exercícios académicos, onde estudantes podem partilhar, resolver e discutir exercícios numa comunidade.",
+    project_description_gobraga: "Uma aplicação multiplataforma que fornece a turistas e visitantes informações essenciais sobre Braga, incluindo atrações turísticas, restaurantes e muito mais.",
     live_demo: "Demo",
 
     // CONTACT

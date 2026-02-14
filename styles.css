@@ -391,7 +391,8 @@ nav .right a span {
 }
 
 @media (max-width: 850px) {
-    /*me-section*/
+
+    /* HERO */
     .hero-section {
         flex-direction: column-reverse;
     }
@@ -399,7 +400,29 @@ nav .right a span {
     .hero-section .headshot img {
         width: 300px;
     }
+
+    /* PROJECTS - igual aos 600px */
+    .projects-section {
+        padding: 0 20px;
+    }
+
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* IMPORTANTE */
+        gap: 20px;
+    }
+
+    .project-card {
+        flex: 0 0 48%;   /* 2 lado a lado */
+        max-width: 48%;
+    }
+
+    .project-image {
+        height: 220px;
+    }
 }
+
 
 @media (max-width: 740px) {
     /*me-section*/

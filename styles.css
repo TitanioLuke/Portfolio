@@ -205,21 +205,48 @@ nav .right a span {
 
 .project-image {
     width: 100%;
-    height: 250px;
-    border-radius: 15px;
+    height: 220px;
+    border-radius: 18px;
     overflow: hidden;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 45px;
+    position: relative;
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%;
+    max-width: 75%;
+    max-height: 75%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     object-position: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Fundos específicos por projeto */
+.solvehub-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gobraga-bg {
+    background: linear-gradient(135deg, #fff4ec 0%, #ffe1cc 100%);
+}
+
+.warehousegpt-bg {
+    background: linear-gradient(135deg, #eef6ff 0%, #e8f0ff 100%);
+}
+
+/* Efeito visual discreto */
+.project-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.28), transparent 45%);
+    z-index: 1;
 }
 
 .project-card h3 {
@@ -436,6 +463,7 @@ nav .right a span {
 
     .project-image {
         height: 200px;
+        padding: 36px;
     }
 }
 
@@ -511,7 +539,8 @@ nav .right a span {
     }
     
     .project-image {
-        height: 180px;
+        height: 170px;
+        padding: 32px;
     }
 
     .project-card h3 {

@@ -121,6 +121,7 @@ const translations = {
     projects_title: "Projects",
     project_description_solvehub: "A collaborative desktop-only platform for solving academic exercises, where students can share, solve, and discuss exercises within a community.",
     project_description_gobraga: "A cross-platform application that provides tourists and visitors with essential information about Braga, including tourist attractions, restaurants and much more.",
+    project_description_warehousegpt: "Local AI-powered warehouse assistant built with Streamlit, Ollama, ChromaDB and RAG. It combines internal warehouse procedures with structured stock data to answer operational questions with source-based responses.",
     live_demo: "Live Demo",
 
     // CONTACT
@@ -140,9 +141,14 @@ const translations = {
   },
 
   pt: { 
+    // NAV
+    nav_github: "GitHub",
+    nav_linkedin: "LinkedIn",
+    nav_email: "Email",
+
     // HERO
     hero_title: "Olá, eu sou o Afonso!",
-    hero_text: "Sou estudante de Engenharia Informática com o objetivo de seguir carreira em cibersegurança. Sou movido pela curiosidade. Gosto de compreender como os sistemas funcionam e como podem ser tornados mais fortes e seguros. Quando não estou a programar estou a tocar um dos meus muitos instrumentos, a ouvir música, ler livros ou a escrever poesia - sempre a explorar novas ideias.",
+    hero_text: "Sou estudante de Engenharia Informática com o objetivo de seguir carreira em cibersegurança. Sou movido pela curiosidade. Gosto de compreender como os sistemas funcionam e como podem ser tornados mais fortes e seguros. Quando não estou a programar estou a tocar um dos meus muitos instrumentos, a ouvir música, a ler livros ou a escrever poesia - sempre a explorar novas ideias.",
 
     hero_skills: "Competências",
     hero_projects: "Projetos",
@@ -153,10 +159,11 @@ const translations = {
     skills_text: "Estas são algumas das tecnologias e conceitos com que tenho trabalhado ao longo do meu curso e projetos pessoais. Estou constantemente a aprender e a expandir as minhas competências, e estou sempre aberto a explorar novas ideias e tecnologias.",
 
     // PROJECTS
-    projects_subtitle: "Explora os Meus Recentes",
+    projects_subtitle: "Explora os Meus Projetos Recentes",
     projects_title: "Projetos",
-    project_description_solvehub: "Uma plataforma desktop colaborativa para resolução de exercícios académicos, onde estudantes podem partilhar, resolver e discutir exercícios numa comunidade.",
+    project_description_solvehub: "Uma plataforma colaborativa para desktop dedicada à resolução de exercícios académicos, onde estudantes podem partilhar, resolver e discutir exercícios em comunidade.",
     project_description_gobraga: "Uma aplicação multiplataforma que fornece a turistas e visitantes informações essenciais sobre Braga, incluindo atrações turísticas, restaurantes e muito mais.",
+    project_description_warehousegpt: "Assistente local de inteligência artificial para operações de armazém, desenvolvido com Streamlit, Ollama, ChromaDB e RAG. Combina procedimentos internos com dados estruturados de stock para responder a perguntas operacionais com indicação das fontes utilizadas.",
     live_demo: "Demo",
 
     // CONTACT
@@ -172,7 +179,7 @@ const translations = {
     toast_error: "Falha ao enviar email. Tenta novamente!",
     toast_empty: "Preenche todos os campos",
     toast_invalid_email: "Insere um email válido",
-    sending: "A Enviar..."
+    sending: "A enviar..."
   }
 };
 
